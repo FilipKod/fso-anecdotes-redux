@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { setAnecdoteFilter } from '../reducers/anecdoteFilter'
+import { setFilter } from '../reducers/anecdoteFilter'
 
 const AnecdoteFilter = () => {
   const [filterInput, setFilterInput] = useState('')
@@ -9,7 +9,7 @@ const AnecdoteFilter = () => {
   const handleChange = (event) => {
     const { value } = event.target
     setFilterInput(value)
-    dispatch(setAnecdoteFilter(value))
+    dispatch(setFilter(value))
   }
 
   return (
